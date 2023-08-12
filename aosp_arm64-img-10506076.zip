@@ -1,0 +1,109 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Artifact Viewer</title>
+  <link rel="icon" href="/public_builds/static/favicon.ico">
+  <script src="/public_builds/js/webcomponents/webcomponentsjs/webcomponents-lite.min.js"></script>
+  
+
+  
+    
+      
+        <script rel="import" href="/public_builds/elements/artifact_viewer/artifact_viewer_bin_out/artifact_viewer_bin.js?c=453551265457375806"></script>
+      
+
+    
+  
+
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+</head>
+<body class="fullbleed">
+  <dom-bind id="app">
+    <template>
+      
+<artifact-viewer-state id="state" store="{{ store }}"></artifact-viewer-state>
+<artifact-viewer-app state="[[state]]" store="[[store]]" id="artifact_view_page"></artifact-viewer-app>
+
+    </template>
+  </dom-bind>
+  <script>
+    (function() {
+      'use strict';
+      function onChange() {
+        window.removeEventListener('load', onChange);
+        window.removeEventListener('dom-change', onChange);
+        window.removeEventListener('HTMLImportsLoaded', onChange);
+        var data = {"CacheBust":"453551265457375806","Debug":false,"JsImport":true,"PageElement":"artifact-viewer","PageID":"artifact_viewer","Public":true,"RootDir":"artifact_viewer"};
+
+		var elementsScript = document.createElement('script');
+		var baseUrl = data['Public'] ? "/public_builds" : "/builds";
+    if (data['Debug']) {
+        elementsScript.src = baseUrl + "/dev/" + data['PageID'] + ".js";
+    } else {
+        elementsScript.src = baseUrl + "/elements/" + data['RootDir'] + "/" + data['PageID'] + "_bin_mashed.js?c=" + data['CacheBust'];
+    }
+		document.body.appendChild(elementsScript);
+  
+
+        
+  var JSVariables = {"artifact":"aosp_arm64-img-10506076.zip","artifactSource":"build","artifactUrl":"https://storage.googleapis.com/android-build/builds/aosp-android12-gsi-linux-aosp_arm64-userdebug/10506076/fc64aa60272886fdb6e9b7bb45b4655cef21f91124caea9571f6badabd7e0a55/aosp_arm64-img-10506076.zip?GoogleAccessId=gcs-sign@android-builds-project.google.com.iam.gserviceaccount.com\u0026Expires=1689679306\u0026Signature=ddwO/KI9YUq4vm0OsQK7DLDakaPpBUz09u5gXQRNRTAoj5vs4IHXB7yaCwuHutEM35hSr8vHh4fukngUUvZsP%2B2QpBUoUZIxYFurDH2BsETz2/3oc1UKGklmEZbZ9ERIzPnNOTb1kY3FIU2k0J9U0DnEF7sohA9y17sNoxDPmdnGYs9CudktrlxYO6SCF/K5GUnzWSMMpDF9%2BTzHLnIhGUWNpcxlxhAzygIuVJWV%2Bo5G608Ys3osAcGLFQKd8WrL0uho92NAu0JipCfwQKudZ4wt7nzyb%2BATmEsJlabpYk7YhfR6WSMBvfhoI2ogWXk9WrAXSYNvV/3gWJAHm7RuDA%3D%3D","authed":true,"branch":"aosp-android12-gsi","buildId":"10506076","displayType":"iframe","forceLogin":false,"idToken":null,"target":"aosp_arm64-userdebug"};
+
+  new Promise(function(res) { window.addEventListener('state-ready', function(){ return res()})}).then(function() {
+    const stateProvider = document.querySelector('#state');
+    app.state = stateProvider;
+    const store = {
+      artifact: JSVariables['artifact'],
+      buildId: JSVariables['buildId'],
+      target: JSVariables['target'],
+      branch: JSVariables['branch'],
+      artifactUrl: JSVariables['artifactUrl'],
+      displayType: JSVariables['displayType'],
+      idToken: JSVariables['idToken'],
+      authed: JSVariables['authed'],
+      forceLogin: JSVariables['forceLogin'],
+    };
+    app.store = store;
+    }
+  );
+
+      }
+      window.addEventListener('load', onChange);
+      window.addEventListener('dom-change', onChange);
+      window.addEventListener('HTMLImportsLoaded', onChange);
+    })();
+  </script>
+  <script type="text/javascript" src="//www.gstatic.com/feedback/api.js" async></script>
+  <script>
+    (function() {
+      var data = {"ProductId":"5093044","ProductVersion":"453551265457375806"};
+
+    function showFeedback() {
+      userfeedback.api.startFeedback({
+        'productId': data['ProductId'],
+        'productVersion': data['ProductVersion']
+      });
+    };
+    window.__showFeedback = showFeedback;
+	
+    })();
+  </script>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54095413-10"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-54095413-10');
+    </script>
+  
+</body>
+</html>
